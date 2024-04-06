@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 let todoList = [];
@@ -60,7 +61,7 @@ let deleteTask = async () => {
         }
     ]);
     let deletedTask = todoList.splice(taskIndex.index - 1, 1);
-    console.log(chalk.bold.blue(`\n ${deletedTask} This Task has been  deleted Successfully from your- Todo-List`));
+    console.log(chalk.bold.red(`\n ${deletedTask} This Task has been  deleted Successfully from your- Todo-List`));
 };
 // function to update a Task
 let updateTask = async () => {
